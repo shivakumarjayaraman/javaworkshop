@@ -99,6 +99,14 @@ public class PlayWithCollections {
         myList.sort((a, b) -> a.length() - b.length()); // ascending
         System.out.println("After sorting " + myList);
 
+        // Iterators : Pattern to traverse collections
+        Iterator<String> iterator = myList.iterator();
+        System.out.println("Iterating using Iterator:");
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            System.out.println(item);
+        }
+
         // Collections and type safety
         List<Object> objects = new ArrayList<>();
         objects.add("String");
