@@ -1,6 +1,4 @@
-package org.spjain.bds.oop.subpackage;
-
-import org.spjain.bds.oop.Animal;
+package org.spjain.bds.oop;
 
 public class Cat extends Animal {
     public Cat() {
@@ -16,7 +14,7 @@ public class Cat extends Animal {
         System.out.printf("Cat of age %d says Meow!\n", getAge());
     }
 
-    public void scratch() {
-        System.out.println("The cat is scratching the furniture.");
+    public void makeSound(String sound) {
+        System.out.printf("Cat says %s\n", sound);
     }
 }

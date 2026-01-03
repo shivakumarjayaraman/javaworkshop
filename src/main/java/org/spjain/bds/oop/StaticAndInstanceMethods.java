@@ -1,4 +1,4 @@
-package org.spjain.bds.oop.subpackage;
+package org.spjain.bds.oop;
 
 public class StaticAndInstanceMethods {
     // A class that demonstrates static and instance methods
