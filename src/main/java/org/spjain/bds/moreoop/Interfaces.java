@@ -12,6 +12,7 @@ public class Interfaces {
         // Interfaces define methods that a class must implement
         // The following example uses the Runnable interface which
         // has a single method run()
+        // The below is an anonymous class implementing Runnable
         Runnable r = new Runnable() {
             @Override
             public void run() {
@@ -20,6 +21,11 @@ public class Interfaces {
         };
 
         r.run();
+
+        // We could do the same with lambda expressions since
+        // Runnable is a functional interface (single abstract method)
+        Runnable r2 = () -> System.out.println("I am a lambda expression");
+        r2.run();
 
         // Interfaces can be used to implement a **safe** form of multiple inheritance
         MyComparableAndRunnableClass obj1 = new MyComparableAndRunnableClass(10);
