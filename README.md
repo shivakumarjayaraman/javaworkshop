@@ -10,3 +10,8 @@ PreRequisites :
    java -cp target/classes org.spjain.bds.fundamentals.BasicProgramStructure
 
 For folks in the workshop, please dont get overwhelmed. All these steps will be explained during the workshop
+
+To run a class from the command line (see example below) 
+
+mvn compile
+mvn exec:java -Dexec.mainClass=org.spjain.bds.fundamentals.BasicFunctionCalls
