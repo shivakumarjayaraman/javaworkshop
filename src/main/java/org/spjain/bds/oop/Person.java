@@ -2,7 +2,7 @@ package org.spjain.bds.oop;
 
 import java.util.Objects;
 
-class Person {
+public class Person {
     private String name;
     private int age;
 

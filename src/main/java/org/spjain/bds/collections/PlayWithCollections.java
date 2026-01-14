@@ -1,6 +1,12 @@
 package org.spjain.bds.collections;
 
+import org.spjain.bds.oop.Animal;
+import org.spjain.bds.oop.Cat;
+import org.spjain.bds.oop.Dog;
+import org.spjain.bds.oop.Person;
+
 import java.util.*;
+import java.util.function.Predicate;
 
 public class PlayWithCollections {
     public static void main(String[] args) {
@@ -108,9 +114,50 @@ public class PlayWithCollections {
         }
 
         // Collections and type safety
-        List<Object> objects = new ArrayList<>();
-        objects.add("String");
-        objects.add(10); // Integer
-        System.out.println("Objects list: " + objects);
+        printCollection(myQueue);
+        // printCollection(myList);
+
+        Animal a = new Dog();
+
+        // Type variance
+        Animal []animals = new Dog[3];
+        animals[0] = new Dog("Dude", 9);
+        animals[1] = new Dog("Max", 10);
+        // animals[2] = new Cat();
+        animals[2] = new Dog("Linux", 15);
+
+        // compiler does not allow this
+        // List<Animal> animes = new ArrayList<Dog>();
+
+        // but this is allowed - use of wildcard
+        List<? extends Animal> animalList = new ArrayList<Dog>();
+
+        List<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog("Max", 10));
+        dogs.add(new Dog("Yoda", 20));
+        animalList = dogs;
+        for (Animal animal : animalList) {
+            animal.makeSound();
+        }
+        // animalList.add(new Dog()); // not allowed .. why ?
+
+        printAll(animals, pet -> pet != null && pet.getAge() > 2);
+
+        Predicate<Object> evenLength = e -> e != null && e.toString().length() % 2 != 0;
+        System.out.println("Printing animals with odd length toString()");
+        printAll(animals, evenLength);
+        Arrays.stream(animals).map(Object::toString).map(s -> s.length()).forEach(System.out::println);
+    }
+    private static <T extends Number> void printCollection(Collection<T> collection) {
+        for (T item : collection) {
+            System.out.println(item);
+        }
+    }
+
+    //public static void printAll(Animal [] pets, Predicate<Animal> filter) {
+    public static void printAll(Animal [] pets, Predicate<? super Animal> filter) {
+        for (Animal p : pets)
+            if (filter.test(p))
+                System.out.println("Animal of age " + p.getAge());
     }
 }

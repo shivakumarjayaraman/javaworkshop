@@ -20,4 +20,11 @@ public class Dog extends Animal {
     public void fetch() {
         System.out.println("The dog is fetching the ball.");
     }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
