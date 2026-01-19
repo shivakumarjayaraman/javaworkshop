@@ -1,5 +1,10 @@
 package org.spjain.bds.moreoop;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExceptionHandling {
     public static void main(String[] args) {
         try {
@@ -30,6 +35,29 @@ public class ExceptionHandling {
 
         // checked exceptions must be declared or caught
         // checkAge(8);
+
+        // Try with resources..
+        /*
+        List<InputStream> lotsOfInputStreams = new ArrayList<>();
+        for (int i = 0; i < 100000; i++) {
+            try {
+                lotsOfInputStreams.add(new FileInputStream("/etc/hosts"));
+            } catch (Exception e) {
+                System.out.println("Opened #files " + lotsOfInputStreams.size());
+                throw new RuntimeException(e);
+            }
+        }
+        */
+
+        // Debug this section by setting a bp in the FIS::close method
+        for (int i = 0; i < 20000; i++) {
+            try (InputStream is = new FileInputStream("/etc/hosts")) {
+                if (is.available() <= 0) throw new Exception("Bad stream");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public static int divide(int a, int b) {

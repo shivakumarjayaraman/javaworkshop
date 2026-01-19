@@ -4,6 +4,7 @@ import org.spjain.bds.oop.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Interfaces {
     public static void main(String[] args) {
@@ -58,6 +59,11 @@ public class Interfaces {
 
         System.out.println(myInterfaceImpl.compute(5, 10));
         System.out.println(myInterfaceImpl.doStuff(5, 10)); // default method
+
+        // Using built-in functional interfaces . Look at the javadocs at
+        // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/package-summary.html
+        Consumer<String> stringConsumer = s -> System.out.println("Consumed: " + s);
+        stringConsumer.accept("Hello, World!");
 
     }
 
