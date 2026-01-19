@@ -24,5 +24,8 @@ public class ArithmeticOperations {
         // Modulus
         int remainder = a % b;
         System.out.println("Modulus: " + a + " % " + b + " = " + remainder);
+
+        // formatted printing can be done this way
+        System.out.printf("a is %d b is %d\n", a, b);
     }
 }

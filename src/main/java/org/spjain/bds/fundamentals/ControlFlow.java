@@ -5,16 +5,16 @@ public class ControlFlow {
         int number = 10;
 
         // If-Else Statement
-        if (number > 0) {
+        /*if (number > 0) {
             System.out.println(number + " is a positive number.");
         } else if (number < 0) {
             System.out.println(number + " is a negative number.");
         } else {
             System.out.println("The number is zero.");
-        }
+        }*/
 
         // Switch Statement
-        int day = 3;
+       /* int day = 3;
         String dayName;
         switch (day) {
             case 1:
@@ -41,32 +41,32 @@ public class ControlFlow {
             default:
                 dayName = "Invalid day";
         }
-        System.out.println("Day " + day + " is " + dayName + ".");
+        System.out.println("Day " + day + " is " + dayName + ".");*/
 
         // For Loop
-        System.out.println("For Loop:");
+       /* System.out.println("For Loop:");
         for (int i = 1; i <= 5; i++) {
             System.out.println("Iteration " + i);
-        }
+        }*/
 
         // While Loop
-        System.out.println("While Loop:");
+       /* System.out.println("While Loop:");
         int count = 1;
         while (count <= 5) {
             System.out.println("Count " + count);
             count++;
-        }
+        }*/
 
         // Do-While Loop
-        System.out.println("Do-While Loop:");
+       /* System.out.println("Do-While Loop:");
         int num = 1;
         do {
             System.out.println("Number " + num);
             num++;
-        } while (num <= 5);
+        } while (num <= 5);*/
 
         // Break and Continue
-        System.out.println("Break and Continue:");
+       /* System.out.println("Break and Continue:");
         for (int i = 1; i <= 10; i++) {
             if (i == 6) {
                 System.out.println("Breaking the loop at i = " + i);
@@ -77,11 +77,10 @@ public class ControlFlow {
                 continue; // Skip even numbers
             }
             System.out.println("Current i = " + i);
-        }
+        }*/
 
         // Switch expression (Java 14+)
-        /*
-        int month = 4;
+       /* int month = 4;
         String monthName = switch (month) {
             case 1 -> "January";
             case 2 -> "February";
@@ -97,6 +96,14 @@ public class ControlFlow {
             case 12 -> "December";
             default -> "Invalid month";
         };
-        */
+        System.out.println("Month " + month + " is " + monthName + ".");*/
+
+        // Nested Loops
+       /* for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }*/
     }
 }
