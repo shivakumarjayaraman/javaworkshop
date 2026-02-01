@@ -11,17 +11,17 @@ public class FunctionsAndParameterCallingConventions {
         System.out.println("After Call by Value: a = " + a + ", b = " + b);
 
         // Call by Reference using Wrapper Class
-        IntegerWrapper aRef = new IntegerWrapper(5);
+      /*  IntegerWrapper aRef = new IntegerWrapper(5);
         IntegerWrapper bRef = new IntegerWrapper(10);
         System.out.println("\nBefore Call by Reference: aRef.value = " + aRef.value + ", bRef.value = " + bRef.value);
         callByReference(aRef, bRef);
-        System.out.println("After Call by Reference: aRef.value = " + aRef.value + ", bRef.value = " + bRef.value);
+        System.out.println("After Call by Reference: aRef.value = " + aRef.value + ", bRef.value = " + bRef.value);*/
     }
 
-    private static void callByValue(int x, int y) {
-        x += 10;
-        y += 20;
-        System.out.println("Inside Call by Value: x = " + x + ", y = " + y);
+    private static void callByValue(int a, int b) {
+        a += 10;
+        b += 20;
+        System.out.println("\tInside Call by Value: a = " + a + ", b = " + b);
     }
 
     private static void callByReference(IntegerWrapper xRef, IntegerWrapper yRef) {

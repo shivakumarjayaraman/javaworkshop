@@ -2,12 +2,12 @@ package org.spjain.bds.fundamentals;
 
 public class ControlFlow {
     public static void main(String[] args) {
-        int number = 10;
+        int number = -10;
 
         // If-Else Statement
-        /*if (number > 0) {
+       /* if (number > 0) {
             System.out.println(number + " is a positive number.");
-        } else if (number < 0) {
+        } else if ((number < 0) && (number != 0)) {
             System.out.println(number + " is a negative number.");
         } else {
             System.out.println("The number is zero.");
@@ -45,17 +45,17 @@ public class ControlFlow {
 
         // For Loop
        /* System.out.println("For Loop:");
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Iteration " + i);
         }*/
 
         // While Loop
-       /* System.out.println("While Loop:");
+        System.out.println("While Loop:");
         int count = 1;
         while (count <= 5) {
             System.out.println("Count " + count);
             count++;
-        }*/
+        }
 
         // Do-While Loop
        /* System.out.println("Do-While Loop:");
@@ -99,11 +99,11 @@ public class ControlFlow {
         System.out.println("Month " + month + " is " + monthName + ".");*/
 
         // Nested Loops
-       /* for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= 5; j++) {
                 System.out.print("*");
             }
             System.out.println();
-        }*/
+        }
     }
 }

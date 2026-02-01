@@ -12,7 +12,7 @@ public class VariablesAndConstants {
 
         // Using a local variable without initialization will cause a compilation error
         int uninitializedVariable;
-        //System.out.println("Uninitialized Variable cannot be used until initialized. " + uninitializedVariable);
+        // System.out.println("Uninitialized Variable cannot be used until initialized. " + uninitializedVariable);
 
         // however you can initialize it before use
         uninitializedVariable = 30;

@@ -3,7 +3,10 @@ package org.spjain.bds.fundamentals;
 public class BasicFunctionCalls {
     public static void main(String[] args) {
         greetUser("Alice");
-        int result = addNumbers(5, 10);
+
+        int x = 5;
+        int y = 10;
+        int result = addNumbers(x, y);
         System.out.println("Sum: " + result);
     }
 

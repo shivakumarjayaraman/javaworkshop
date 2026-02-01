@@ -26,6 +26,6 @@ public class ArithmeticOperations {
         System.out.println("Modulus: " + a + " % " + b + " = " + remainder);
 
         // formatted printing can be done this way
-        System.out.printf("a is %d b is %d\n", a, b);
+        System.out.printf("a is %d b is %.2f\n", a, (float) b);
     }
 }
