@@ -44,18 +44,18 @@ public class ControlFlow {
         System.out.println("Day " + day + " is " + dayName + ".");*/
 
         // For Loop
-       /* System.out.println("For Loop:");
+      /*  System.out.println("For Loop:");
         for (int i = 0; i < 5; i++) {
             System.out.println("Iteration " + i);
         }*/
 
         // While Loop
-        System.out.println("While Loop:");
+       /* System.out.println("While Loop:");
         int count = 1;
         while (count <= 5) {
             System.out.println("Count " + count);
             count++;
-        }
+        }*/
 
         // Do-While Loop
        /* System.out.println("Do-While Loop:");
@@ -63,10 +63,10 @@ public class ControlFlow {
         do {
             System.out.println("Number " + num);
             num++;
-        } while (num <= 5);*/
+        } while (num < 5);*/
 
         // Break and Continue
-       /* System.out.println("Break and Continue:");
+      /*  System.out.println("Break and Continue:");
         for (int i = 1; i <= 10; i++) {
             if (i == 6) {
                 System.out.println("Breaking the loop at i = " + i);
@@ -77,8 +77,8 @@ public class ControlFlow {
                 continue; // Skip even numbers
             }
             System.out.println("Current i = " + i);
-        }*/
-
+        }
+*/
         // Switch expression (Java 14+)
        /* int month = 4;
         String monthName = switch (month) {
@@ -96,8 +96,8 @@ public class ControlFlow {
             case 12 -> "December";
             default -> "Invalid month";
         };
-        System.out.println("Month " + month + " is " + monthName + ".");*/
-
+        System.out.println("Month " + month + " is " + monthName + ".");
+*/
         // Nested Loops
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= 5; j++) {

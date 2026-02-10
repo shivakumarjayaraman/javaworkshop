@@ -8,10 +8,11 @@ public class SimpleRecursiveFunctionCall {
     }
 
     private static int factorial(int n) {
-        if (n == 0 || n == 1) {
+        if (n == 0) {
             return 1; // Base case: factorial of 0 or 1 is 1
-        } else {
-            return n * factorial(n - 1); // Recursive case
         }
+        int ret = n * factorial(n - 1); // Recursive case
+        return ret;
     }
+
 }

@@ -15,6 +15,7 @@ public class BasicFunctionCalls {
     }
 
     private static int addNumbers(int a, int b) {
-        return a + b;
+        int res = a+b;
+        return res;
     }
 }

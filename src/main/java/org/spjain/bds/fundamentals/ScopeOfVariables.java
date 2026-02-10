@@ -14,9 +14,11 @@ public class ScopeOfVariables {
 
             // cant redeclare outerVar here
             // int outerVar = 30; // This will cause a compilation error
+            System.out.println("Accessing Outer Variable from Inner Block: " + outerVar);
         }
 
         // Uncommenting the next line will cause a compilation error
-        // System.out.println("Accessing Inner Variable from Outer Block: " + innerVar);
+        System.out.println(outerVar);
+        //System.out.println("Accessing Inner Variable from Outer Block: " + innerVar);
     }
 }

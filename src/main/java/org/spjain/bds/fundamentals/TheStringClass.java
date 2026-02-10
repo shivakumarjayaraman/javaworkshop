@@ -17,7 +17,7 @@ public class TheStringClass {
         String substring = concatenated.substring(7, 12);
         int indexOfJava = concatenated.indexOf("Java");
 
-        System.out.println("Length: " + length);
+     /*   System.out.println("Length: " + length);
         System.out.println("Upper Case: " + upperCase);
         System.out.println("Lower Case: " + lowerCase);
         System.out.println("Substring (7-12): " + substring);
@@ -42,7 +42,7 @@ public class TheStringClass {
         String original = "Immutable";
         String modified = original.replace("Immutable", "Mutable");
         System.out.println("Original String: " + original);
-
+*/
         // conversion between strings and other data types
         int number = 100;
         String numberStr = Integer.toString(number);

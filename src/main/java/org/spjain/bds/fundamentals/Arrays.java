@@ -3,9 +3,16 @@ package org.spjain.bds.fundamentals;
 public class Arrays {
     public static void main(String[] args) {
         // Declare and initialize an array of integers
+        // Array representation:
+        //              __________________________
+        // numbers ---> | 10 | 20 | 30 | 40 | 50 |
+        //              --------------------------
+        //              |  0 |  1 |  2 |  3 |  4 |  (indices)
+        //              --------------------------
+        // numbers is on stack and points to the array on heap
         int[] numbers = {10, 20, 30, 40, 50};
 
-        // Access and print elements of the array
+      /*  // Access and print elements of the array
         System.out.println("Array Elements:");
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Element at index " + i + ": " + numbers[i]);
@@ -16,10 +23,10 @@ public class Arrays {
         System.out.println("\nAfter modifying the element at index 2:");
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Element at index " + i + ": " + numbers[i]);
-        }
+        }*/
 
         // multidimensional array
-        int[][] matrix = {
+        /*int[][] matrix = {
             {1, 2, 3},
             {4, 5, 6},
             {7, 8, 9}
@@ -32,15 +39,18 @@ public class Arrays {
             System.out.println();
         }
 
-        // a function that prints a pascals triangle using arrays
-        printPascalsTriangle(5);
+        System.out.println(matrix[1][1]);*/
 
-        // a function that creates an array of strings and prints them in reverse order
+
+        // a function that prints a pascals triangle using arrays
+        // printPascalsTriangle(5);
+
+     /*   // a function that creates an array of strings and prints them in reverse order
         String[] words = {"Hello", "World", "This", "Is", "Java"};
         System.out.println("\nStrings in Reverse Order:");
         for (int i = words.length - 1; i >= 0; i--) {
             System.out.println(words[i]);
-        }
+        }*/
 
         // create an array of empty strings and fill it with user input
         String [] userInputs = new String[3];
