@@ -2,12 +2,9 @@ package org.spjain.bds.oop;
 
 public class Blob  {
     private String data;
+    private int size;
 
-    /*
-    public Blob(String data) {
-        this.data = data;
-    }
-    */
+
 
     public String getData() {
         return data;

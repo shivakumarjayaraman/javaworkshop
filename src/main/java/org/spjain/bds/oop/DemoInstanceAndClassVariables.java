@@ -26,5 +26,9 @@ public class DemoInstanceAndClassVariables {
         // Displaying information for both instances
         person1.displayInfo();
         person2.displayInfo();
+
+        System.out.println("Organization is " + organization);
+
+        // Name is an instance variable, so we cannot access it directly from the class
     }
 }

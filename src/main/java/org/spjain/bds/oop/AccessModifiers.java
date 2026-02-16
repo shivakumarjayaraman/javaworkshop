@@ -11,4 +11,8 @@ public class AccessModifiers {
     public String getPrivateField() {
         return privateField;
     }
+
+    public void setPrivateField(String privateField) {
+        this.privateField = privateField;
+    }
 }

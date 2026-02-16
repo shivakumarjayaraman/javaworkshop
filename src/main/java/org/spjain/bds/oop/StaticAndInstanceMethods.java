@@ -13,7 +13,7 @@ public class StaticAndInstanceMethods {
     public static void main(String[] args) {
         System.out.println("Static and Instance Methods Example");
         // Calling static method
-        staticMethod();
+        StaticAndInstanceMethods.staticMethod();
         // cannot call instance method directly
         // instanceMethod();
         // Creating an instance to call instance method
