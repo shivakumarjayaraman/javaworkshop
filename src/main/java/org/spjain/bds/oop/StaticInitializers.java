@@ -11,6 +11,8 @@ public class StaticInitializers {
         // System.out.println(instanceVar);
     }
     int instanceVar = 20;
+    float uninitializedInstanceVar;
+    static boolean uninitializedStaticVar;
 
     static int staticVar = 10;
     {
@@ -38,6 +40,9 @@ public class StaticInitializers {
     }
 
     public static void main(String[] args) {
+        int uninitializedLocalVar;
+        boolean uninitializedLocalBoolean;
+
         System.out.println("Static Initializers Demo");
         StaticInitializers si = new StaticInitializers();
         System.out.println(si);

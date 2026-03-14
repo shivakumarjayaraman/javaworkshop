@@ -1,7 +1,7 @@
 package org.spjain.bds.oop;
 
 public class Animal {
-    int age = 0;
+    private int age = 0;
     public Animal() {
         System.out.println();
     }

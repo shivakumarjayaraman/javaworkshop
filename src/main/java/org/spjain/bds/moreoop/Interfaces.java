@@ -2,6 +2,7 @@ package org.spjain.bds.moreoop;
 
 import org.spjain.bds.oop.Animal;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
@@ -27,6 +28,13 @@ public class Interfaces {
         // Runnable is a functional interface (single abstract method)
         Runnable r2 = () -> System.out.println("I am a lambda expression");
         r2.run();
+
+        // You can have multiple lines in the lambda body as well.
+        // You will need to use curly braces and a return statement if needed.
+        Runnable r3 = () -> {
+            System.out.println("This is a lambda with multiple lines");
+            System.out.println("It can do more complex things");
+        };
 
         // Interfaces can be used to implement a **safe** form of multiple inheritance
         MyComparableAndRunnableClass obj1 = new MyComparableAndRunnableClass(10);
@@ -64,6 +72,7 @@ public class Interfaces {
         // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/package-summary.html
         Consumer<String> stringConsumer = s -> System.out.println("Consumed: " + s);
         stringConsumer.accept("Hello, World!");
+
 
     }
 

@@ -123,11 +123,11 @@ public class PlayWithCollections {
         Animal []animals = new Dog[3];
         animals[0] = new Dog("Dude", 9);
         animals[1] = new Dog("Max", 10);
-        // animals[2] = new Cat();
-        animals[2] = new Dog("Linux", 15);
+        //animals[2] = new Cat();
+        //animals[2] = new Dog("Linux", 15);
 
         // compiler does not allow this
-        // List<Animal> animes = new ArrayList<Dog>();
+        //List<Animal> animes = new ArrayList<Dog>();
 
         // but this is allowed - use of wildcard
         List<? extends Animal> animalList = new ArrayList<Dog>();

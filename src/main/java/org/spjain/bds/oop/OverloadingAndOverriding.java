@@ -28,6 +28,8 @@ public class OverloadingAndOverriding {
 
         // Problem .. Will throw an exception
         // Dog wrongDogRef = (Dog) new Animal(); // This would throw ClassCastException at runtime
+        Animal cat = new Cat();
+        Dog wrongDogRef = (Dog) cat; // This will compile but throw ClassCastException at runtime
     }
 
     private static void doSomething() {

@@ -13,6 +13,6 @@ public class RecordDemo {
         System.out.println(record.hashCode() == record2.hashCode()); // true
 
         // You can define methods inside records
-        record.someMethod();
+        //record.someMethod();
     }
 }

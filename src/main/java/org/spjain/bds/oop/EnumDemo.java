@@ -3,7 +3,7 @@ package org.spjain.bds.oop;
 public class EnumDemo {
     public static void main(String [] args) {
         Day today = Day.WEDNESDAY;
-        System.out.println("Today is: " + today);
+        System.out.println("Today is: " + today );
 
         switch (today) {
             case MONDAY:
@@ -19,7 +19,8 @@ public class EnumDemo {
                 System.out.println("Just another day.");
         }
 
-        Day someDay = Day.valueOf("FRIDAY");
+        Day someDay = Day.valueOf("SUNDAY");
+
         System.out.println("Some day is: " + someDay);
     }
 }

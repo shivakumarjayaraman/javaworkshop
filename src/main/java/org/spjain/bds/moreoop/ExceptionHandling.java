@@ -10,7 +10,7 @@ public class ExceptionHandling {
         try {
             int result = divide(10, 0);
             System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
+        } catch (Exception e) {
             System.out.println("Caught an ArithmeticException: " + e.getMessage());
         } finally {
             System.out.println("Execution of the try-catch block is complete.");
@@ -37,8 +37,7 @@ public class ExceptionHandling {
         // checkAge(8);
 
         // Try with resources..
-        /*
-        List<InputStream> lotsOfInputStreams = new ArrayList<>();
+       /* List<InputStream> lotsOfInputStreams = new ArrayList<>();
         for (int i = 0; i < 100000; i++) {
             try {
                 lotsOfInputStreams.add(new FileInputStream("/etc/hosts"));
@@ -46,17 +45,17 @@ public class ExceptionHandling {
                 System.out.println("Opened #files " + lotsOfInputStreams.size());
                 throw new RuntimeException(e);
             }
-        }
-        */
+        }*/
 
         // Debug this section by setting a bp in the FIS::close method
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < 0; i++) {
             try (InputStream is = new FileInputStream("/etc/hosts")) {
                 if (is.available() <= 0) throw new Exception("Bad stream");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+        System.out.println("DONE DONE DONE");
 
     }
 
