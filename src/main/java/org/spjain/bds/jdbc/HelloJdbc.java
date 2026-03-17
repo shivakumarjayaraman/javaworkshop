@@ -11,8 +11,9 @@ public class HelloJdbc {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("MySQL JDBC Driver not found");
         }
     }
 
@@ -62,6 +63,27 @@ public class HelloJdbc {
         }
     }
 
+    private void deleteAuthor(Connection connection, int id) {
+        // delete all the books for this author first
+        String sql1 = "DELETE FROM books WHERE AuthorID = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql1)) {
+            statement.setInt(1, id);
+            int rowsDeleted = statement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsDeleted);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        String sql2 = "DELETE FROM authors WHERE AuthorID = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql2)) {
+            statement.setInt(1, id);
+            int rowsDeleted = statement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsDeleted);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void addAuthor(Connection connection, String fname, String lname, String email) {
         String sql = "INSERT INTO authors (FirstName, LastName, Email) VALUES (?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -99,5 +121,15 @@ public class HelloJdbc {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        try (Connection connection = helloJdbc.getConnection()) {
+            connection.setAutoCommit(false);
+            int id = helloJdbc.getAuthorId(connection, "hello@gmail.com");
+            helloJdbc.deleteAuthor(connection, id);
+            connection.commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
