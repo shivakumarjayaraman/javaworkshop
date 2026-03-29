@@ -340,14 +340,14 @@ public class Concurrency {
     // main — step through each section in the debugger
     // -------------------------------------------------------------------------
     public static void main(String[] args) throws Exception {
-        demoThreadPool();
-        demoCallableAndFuture();
-        demoRaceCondition();
-        demoSynchronized();
-        demoAtomicInteger();
-        demoReentrantLock();
-        demoCountDownLatch();
-        demoConcurrentHashMap();
+        // demoThreadPool();
+        // demoCallableAndFuture();
+        // demoRaceCondition();
+        // demoSynchronized();
+        // demoAtomicInteger();
+        //demoReentrantLock();
+        // demoCountDownLatch();
+        // demoConcurrentHashMap();
         demoBlockingQueue();
     }
 }
