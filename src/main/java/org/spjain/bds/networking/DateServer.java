@@ -63,8 +63,8 @@ public class DateServer {
 
                     BufferedReader in  = new BufferedReader(
                             new InputStreamReader(clientSocket.getInputStream()));
-                    PrintWriter  out   = new PrintWriter(
-                            clientSocket.getOutputStream(), true); // auto-flush
+                    BufferedWriter out   = new BufferedWriter(
+                            new OutputStreamWriter(clientSocket.getOutputStream()));
 
                     // Read the client's greeting (e.g. "hello")
                     String message = in.readLine();
@@ -81,7 +81,8 @@ public class DateServer {
 
                     // Build and send the response
                     String now = LocalDateTime.now().format(FORMATTER);
-                    out.println("Current date/time: " + now);
+                    out.write("Current date/time: " + now + "\n");
+                    out.flush();
                     System.out.println("Replied with: " + now);
 
                 } // clientSocket is closed here; the loop goes back to accept()
