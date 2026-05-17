@@ -1,5 +1,6 @@
 package org.spjain.bds.concurrency;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -25,7 +26,7 @@ public class DancingThreads {
         Dancer d1 = new Dancer("D1", count);
         Dancer d2 = new Dancer("D2", count);
 
-        d1.start(); d2.start();
+        d1.start(); sleep(5000); d2.start();
         d1.join(); d2.join();
 
         System.out.println("All Done");
